@@ -1,0 +1,5 @@
+---
+openssl_pkgs:
+  - openssl
+openssl_dev_pkgs:
+  - openssl-dev
