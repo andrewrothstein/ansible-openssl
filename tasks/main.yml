@@ -1,26 +1,26 @@
 ---
 - name: resolve platform specific vars
-  include_vars: '{{item}}'
+  include_vars: '{{ item }}'
   with_first_found:
     - files:
-        - '{{ansible_distribution}}-{{ansible_distribution_release}}.yml'
-        - '{{ansible_distribution}}.yml'
-        - '{{ansible_os_family}}.yml'
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
       skip: true
       paths:
-        - '{{role_path}}/vars'
+        - '{{ role_path }}/vars'
 - name: install openssl pkgs...
   become: yes
   become_user: root
-  with_items: '{{openssl_pkgs|default(["openssl"])}}'
+  with_items: '{{ openssl_pkgs|default(["openssl"]) }}'
   package:
-    name: '{{item}}'
+    name: '{{ item }}'
     state: present
 - name: install openssl dev pkgs...
   become: yes
   become_user: root
-  with_items: '{{openssl_dev_pkgs|default([])}}'
+  with_items: '{{ openssl_dev_pkgs|default([]) }}'
   when: openssl_include_dev_pkgs
   package:
-    name: '{{item}}'
+    name: '{{ item }}'
     state: present
