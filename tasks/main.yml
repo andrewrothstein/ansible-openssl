@@ -20,5 +20,5 @@
   become: yes
   become_user: root
   package:
-    name: '{{ openssl_dev_pkgs}}'
+    name: '{{ openssl_dev_pkgs }}'
     state: present
