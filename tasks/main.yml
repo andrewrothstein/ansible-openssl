@@ -12,15 +12,13 @@
 - name: install openssl pkgs...
   become: yes
   become_user: root
-  with_items: '{{ openssl_pkgs|default(["openssl"]) }}'
   package:
-    name: '{{ item }}'
+    name: '{{ openssl_pkgs }}'
     state: present
 - name: install openssl dev pkgs...
+  when: openssl_include_dev_pkgs
   become: yes
   become_user: root
-  with_items: '{{ openssl_dev_pkgs|default([]) }}'
-  when: openssl_include_dev_pkgs
   package:
-    name: '{{ item }}'
+    name: '{{ openssl_dev_pkgs}}'
     state: present

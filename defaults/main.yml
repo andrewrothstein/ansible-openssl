@@ -1,3 +1,6 @@
 ---
 # defaults file for openssl
 openssl_include_dev_pkgs: False
+openssl_pkgs:
+  - openssl
+openssl_dev_pkgs: []
