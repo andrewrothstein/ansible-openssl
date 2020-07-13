@@ -1,0 +1,4 @@
+---
+openssl_pkgs:
+  - dev-libs/openssl
+
