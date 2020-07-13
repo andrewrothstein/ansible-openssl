@@ -35,5 +35,6 @@ galaxy_info:
         - xenial
   galaxy_tags:
     - development
+  role_name: openssl
 
 dependencies: []
