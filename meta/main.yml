@@ -27,7 +27,7 @@ galaxy_info:
         - 32
     - name: Gentoo
       versions:
-        - latest
+        - all
     - name: Ubuntu
       versions:
         - bionic
