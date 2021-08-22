@@ -1,6 +1,6 @@
 andrewrothstein.openssl
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-openssl.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-openssl)
+![Build Status](https://github.com/andrewrothstein/ansible-openssl/actions/workflows/build.yml/badge.svg)
 
 Installs openssl and optionally openssl-dev operating system packages.
 
