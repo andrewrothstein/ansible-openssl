@@ -1,5 +1,5 @@
 ---
 - hosts: all
   roles:
-    - role: '{{playbook_dir}}'
-      openssl_include_dev_pkgs: True
+    - role: '{{ playbook_dir }}'
+      openssl_include_dev_pkgs: true

@@ -10,14 +10,14 @@
       paths:
         - '{{ role_path }}/vars'
 - name: install openssl pkgs...
-  become: yes
+  become: true
   become_user: root
   package:
     name: '{{ openssl_pkgs }}'
     state: present
 - name: install openssl dev pkgs...
   when: openssl_include_dev_pkgs
-  become: yes
+  become: true
   become_user: root
   package:
     name: '{{ openssl_dev_pkgs }}'
